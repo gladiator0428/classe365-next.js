@@ -3,7 +3,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { STRAPI_API } from "@/config";
 import { solutions } from "./data";
 import * as Styled from "./solutions.styles";
-import Image from "next/image";
+import * as Data from "./data";
 
 type Props = {
   subtitle?: string;
@@ -15,7 +15,11 @@ type Props = {
   }[];
 };
 
-export const Solutions: React.FC<Props> = ({ data = [], subtitle, title }) => {
+export const Solutions: React.FC<Props> = ({
+  data = solutions,
+  subtitle,
+  title,
+}) => {
   const [selected, setSelected] = useState(0);
 
   return (
@@ -27,34 +31,39 @@ export const Solutions: React.FC<Props> = ({ data = [], subtitle, title }) => {
       <Styled.SolutionContentWrapper id="image-wrapper1">
         <Styled.SolutionImageGroup>
           <Styled.SolutionImageWrapper
-            bg={solutions[selected]?.image}
-            // bg={STRAPI_API + data[selected]?.image?.url}
+            bg={
+              data[selected]?.image?.url
+                ? STRAPI_API + data[selected]?.image?.url
+                : data[selected].image
+            }
           >
             <div>
-              <img src={solutions[selected]?.image} alt="" />
-              {/* <Image
-                src={solutions[selected]?.image}
-                // src={STRAPI_API + data[selected]?.image?.url}
-                alt="Solution"
-                width={814}
-                height={621}
-                quality={100}
-                // placeholder="blur"
-              /> */}
+              <img
+                src={
+                  data[selected]?.image?.url
+                    ? STRAPI_API + data[selected]?.image?.url
+                    : data[selected].image
+                }
+                alt=""
+              />
             </div>
           </Styled.SolutionImageWrapper>
         </Styled.SolutionImageGroup>
         <Styled.SolutionContainer>
           <div className="image-wrapper">
-            {solutions.map((item, key) => (
+            {data.map((item, key) => (
               <div key={key} id={`solution1-image-${key}`}>
-                <img src={item.image} alt="Solution" />
-                {/* <img src={STRAPI_API + item.image.url} alt="Solution" /> */}
+                <img
+                  src={
+                    item.image.url ? STRAPI_API + item.image.url : item.image
+                  }
+                  alt="Solution"
+                />
               </div>
             ))}
           </div>
           <div className="list">
-            {solutions.map((row, key) => (
+            {data.map((row, key) => (
               <Styled.SolutionCardWrapper
                 key={key}
                 className={`${key === selected ? "active" : ""}`}
@@ -64,8 +73,12 @@ export const Solutions: React.FC<Props> = ({ data = [], subtitle, title }) => {
                 <div>
                   <span>{row.text}</span>
                   <div>
-                    <img src={row.image} alt="" />
-                    {/* <img src={STRAPI_API + row.image.url} alt="" /> */}
+                    <img
+                      src={
+                        row.image.url ? STRAPI_API + row.image.url : row.image
+                      }
+                      alt=""
+                    />
                   </div>
                   <h4>
                     Start Free 14-days trial <BsArrowRight />

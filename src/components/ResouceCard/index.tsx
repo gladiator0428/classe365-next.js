@@ -14,7 +14,7 @@ export const ResourceCard: React.FC<IResourceCardProps> = ({
     <Styled.ResourceCardWrapper>
       <Styled.ImageWrapper>
         <Image
-          src={STRAPI_API + image?.url}
+          src={image?.url ? STRAPI_API + image?.url : image}
           alt={``}
           width={344}
           height={159}

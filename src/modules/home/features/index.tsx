@@ -1,10 +1,11 @@
 import React from "react";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import { STRAPI_API } from "@/config";
 import * as Comp from "@/components";
 import * as Styled from "./features.styles";
-import Image from "next/image";
+import * as Data from "./data";
 
 type Props = {
   icon: any;
@@ -20,8 +21,10 @@ type Props = {
   }[];
 };
 
+const { features } = Data;
+
 export const Features: React.FC<Props> = ({
-  data,
+  data = features,
   icon,
   image,
   subtitle,
@@ -32,19 +35,17 @@ export const Features: React.FC<Props> = ({
     <Styled.FeaturesWrapper>
       <Styled.FeaturesInfoWrapper>
         <Styled.FeaturesDescription>
-          <img src={STRAPI_API + icon?.url} alt="" />
+          <img src={icon?.url ? STRAPI_API + icon?.url : icon} alt="" />
           <h2>{subtitle}</h2>
           <p>{title}</p>
         </Styled.FeaturesDescription>
         <Styled.FeatureInfo>
-          {image?.url && (
-            <Image
-              src={STRAPI_API + image?.url}
-              alt="Feature"
-              width={125}
-              height={125}
-            />
-          )}
+          <Image
+            src={image?.url ? STRAPI_API + image?.url : image}
+            alt="Feature"
+            width={125}
+            height={125}
+          />
           <p>{text}</p>
         </Styled.FeatureInfo>
       </Styled.FeaturesInfoWrapper>

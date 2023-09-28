@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { STRAPI_API } from "@/config";
 import * as Styled from "./institutions.styles";
+import * as Data from "./data";
 
 type Props = {
   subtitle: string;
@@ -16,8 +17,10 @@ type Props = {
   }[];
 };
 
+const { institutions } = Data;
+
 export const Institutions: React.FC<Props> = ({
-  data = [],
+  data = institutions,
   subtitle,
   title,
 }) => {
@@ -43,9 +46,20 @@ export const Institutions: React.FC<Props> = ({
         </div>
       </Styled.InstitutionContainer>
       <Styled.InstitutionImageWrapper
-        bg={STRAPI_API + data[seleted]?.image?.url}
+        bg={
+          data[seleted]?.image?.url
+            ? STRAPI_API + data[seleted]?.image?.url
+            : data[seleted]?.image
+        }
       >
-        <img src={STRAPI_API + data[seleted]?.image?.url} alt="" />
+        <img
+          src={
+            data[seleted]?.image?.url
+              ? STRAPI_API + data[seleted]?.image?.url
+              : data[seleted]?.image
+          }
+          alt=""
+        />
       </Styled.InstitutionImageWrapper>
       <Styled.InsititutionSwiper>
         {data.length > 0 && (
@@ -65,7 +79,14 @@ export const Institutions: React.FC<Props> = ({
                   <h3>{row.title}</h3>
                   <p>{row.text}</p>
                   <div className="image-wrapper">
-                    <img src={STRAPI_API + row?.image?.url} alt="" />
+                    <img
+                      src={
+                        row?.image?.url
+                          ? STRAPI_API + row?.image?.url
+                          : row.image
+                      }
+                      alt=""
+                    />
                   </div>
                   <div className="info-wrapper">
                     <h1>{row.amount}</h1>

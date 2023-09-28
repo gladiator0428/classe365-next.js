@@ -11,6 +11,7 @@ export const FeatureCardWrapper = styled.div`
     height: 76px;
     width: auto;
     margin-right: 16px;
+    image-rendering: pixelated;
   }
   div {
     width: 184px;

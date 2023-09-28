@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from "react";
 import axios from "axios";
 import { STRAPI_API } from "@/config";
 import * as Context from "./contexts";
+import { Loading } from "@/components/Loading";
 
 export const AppContext: React.FC<React.HTMLAttributes<HTMLElement>> = ({
   children,
@@ -63,7 +64,7 @@ export const AppContext: React.FC<React.HTMLAttributes<HTMLElement>> = ({
       <Context.SolutionFeature.Provider value={solutionFeatureValue}>
         <Context.SolutionInstitute.Provider value={solutionInstituteValue}>
           <Context.SolutionTeam.Provider value={solutionTeamValue}>
-            {loading ? "Loading..." : children}
+            {loading ? <Loading /> : children}
           </Context.SolutionTeam.Provider>
         </Context.SolutionInstitute.Provider>
       </Context.SolutionFeature.Provider>

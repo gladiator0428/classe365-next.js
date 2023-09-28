@@ -2,6 +2,7 @@ import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { STRAPI_API } from "@/config";
 import * as Styled from "./experience.styles";
+import * as Data from "./data";
 
 type Props = {
   title: string;
@@ -14,7 +15,8 @@ type Props = {
   }[];
 };
 
-export const Experience: React.FC<Props> = ({ data, title }) => {
+const { experiences } = Data;
+export const Experience: React.FC<Props> = ({ data = experiences, title }) => {
   return (
     <Styled.ExperienceSectionWrapper>
       <Styled.TitleWrapper>
@@ -28,7 +30,10 @@ export const Experience: React.FC<Props> = ({ data, title }) => {
           <Styled.ExperienceItemWrapper key={index} color={row.color}>
             <h3 style={{ color: row.color }}>{row.subtitle}</h3>
             {/* {row.icon} */}
-            <img src={STRAPI_API + row.icon?.url} alt="" />
+            <img
+              src={row.icon.url ? STRAPI_API + row.icon?.url : row.icon}
+              alt=""
+            />
             <h2>{row.title}</h2>
             <p>{row.text}</p>
             <h4>

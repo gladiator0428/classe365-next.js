@@ -2,6 +2,7 @@ import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import * as Comp from "@/components";
 import * as Styled from "./resources.styles";
+import { resources } from "./data";
 
 type Props = {
   title: string;
@@ -13,7 +14,7 @@ type Props = {
   }[];
 };
 
-export const Resources: React.FC<Props> = ({ data, title }) => {
+export const Resources: React.FC<Props> = ({ data = resources, title }) => {
   return (
     <Styled.ResourcesWrapper>
       <h2>{title}</h2>

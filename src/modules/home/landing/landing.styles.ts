@@ -166,7 +166,7 @@ export const LandingShapeWrapper = styled.div`
     right: 0;
   }
   .shape-5 {
-    animation: ${rotateAnim} 3s infinite ease-in-out;
+    animation: ${bubbleAnim} 2s infinite ease-in-out;
     bottom: 2%;
     left: 50%;
   }
