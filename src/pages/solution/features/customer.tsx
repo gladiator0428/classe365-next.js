@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useContext } from "react";
-import { AppLayout } from "@/layouts";
-import * as Section from "@/modules/solution/features";
-import { SolutionFeature } from "@/context/contexts";
+import { AppLayout } from "../../../layouts";
+import * as Section from "../../../modules/solution/features";
+import { SolutionFeature } from "../../../context/contexts";
 
-export const FeatureAlumni: React.FC = () => {
+const FeatureCustomer: React.FC = () => {
   const [data, setData] = useState<any>({});
   const { solutionFeature } = useContext<any>(SolutionFeature);
   useEffect(() => {
     if (
-      solutionFeature.filter((f: any) => f.page.key === "alumni").length > 0
+      solutionFeature.filter((f: any) => f.page.key === "customer").length > 0
     ) {
-      setData(solutionFeature.filter((f: any) => f.page.key === "alumni")[0]);
+      setData(solutionFeature.filter((f: any) => f.page.key === "customer")[0]);
     }
   }, [solutionFeature]);
 
   return data ? (
-    <AppLayout name="solution_feature_alumni" is_new_book={true}>
+    <AppLayout name="solution_feature_customer" is_new_book={true}>
       <Section.Title
         subtitle={data?.landing_subtitle}
         title={data?.landing_title}
@@ -35,3 +35,5 @@ export const FeatureAlumni: React.FC = () => {
     <>No Data</>
   );
 };
+
+export default FeatureCustomer;

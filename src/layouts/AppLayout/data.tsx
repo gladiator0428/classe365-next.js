@@ -38,7 +38,7 @@ export const headerLeftNavs = [
           },
           {
             label: "Teachers",
-            to: "/solution/team/teachers",
+            to: "/solution/team/teacher",
             icon: <PiPresentation />,
           },
           {
@@ -69,7 +69,7 @@ export const headerLeftNavs = [
           },
           {
             label: "Schools",
-            to: "/solution/institutes/schools",
+            to: "/solution/institutes/school",
             icon: <GiWhiteBook />,
           },
           {
@@ -90,7 +90,7 @@ export const headerLeftNavs = [
         subMenu: [
           {
             label: "Pre-Adminssion & Enrolment",
-            to: "/solution/features/pre-admission",
+            to: "/solution/features/pre",
             image: "/assets/images/shapes/pre-admission.png",
           },
           {

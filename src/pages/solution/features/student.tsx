@@ -3,21 +3,19 @@ import { AppLayout } from "@/layouts";
 import * as Section from "@/modules/solution/features";
 import { SolutionFeature } from "@/context/contexts";
 
-export const FeatureAnalytics: React.FC = () => {
+const FeatureStudent: React.FC = () => {
   const [data, setData] = useState<any>({});
   const { solutionFeature } = useContext<any>(SolutionFeature);
   useEffect(() => {
     if (
-      solutionFeature.filter((f: any) => f.page.key === "analytics").length > 0
+      solutionFeature.filter((f: any) => f.page.key === "student").length > 0
     ) {
-      setData(
-        solutionFeature.filter((f: any) => f.page.key === "analytics")[0]
-      );
+      setData(solutionFeature.filter((f: any) => f.page.key === "student")[0]);
     }
   }, [solutionFeature]);
 
   return (
-    <AppLayout name="solution_feature_analytics" is_new_book={true}>
+    <AppLayout name="solution_feature_student" is_new_book={true}>
       <Section.Landing
         data={data?.landing_arrays}
         description={data?.landing_description}
@@ -37,3 +35,5 @@ export const FeatureAnalytics: React.FC = () => {
     </AppLayout>
   );
 };
+
+export default FeatureStudent;

@@ -7,7 +7,7 @@ import { Loading } from "@/components/Loading";
 export const AppContext: React.FC<React.HTMLAttributes<HTMLElement>> = ({
   children,
 }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [homeContext, setHomeContext] = useState<any>(null);
   const [solutionFeature, setSolutionFeature] = useState<any>([]);
   const [solutionInstitute, setSolutionInstitute] = useState<any>([]);
