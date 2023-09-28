@@ -55,10 +55,9 @@ export const SolutionContainer = styled.div`
   .image-wrapper {
     display: none;
   }
-  @media screen and (max-width: 1280px) {
+  /* @media screen and (max-width: 1280px) {
     position: relative;
     display: flex;
-    /* align-items: center; */
     .image-wrapper {
       display: block;
       width: 55%;
@@ -66,13 +65,12 @@ export const SolutionContainer = styled.div`
         width: 100%;
         display: block;
         height: auto;
-        /* image-rendering: pixelated; */
       }
     }
     .list {
       height: fit-content;
     }
-  }
+  } */
   @media screen and (max-width: 768px) {
     .image-wrapper {
       display: none;
@@ -188,25 +186,15 @@ export const SolutionImageWrapper = styled.div<{ bg: string }>`
     display: flex;
     transition: all 0.3s;
     width: calc(60% - 40px);
-    /* background: url(${({ bg }) => bg}) no-repeat; */
-    /* background-size: contain; */
-    /* image-rendering: pixelated; */
     img {
-      /* opacity: 0; */
       width: 814px;
 
       max-width: 100%;
       height: auto;
     }
   }
-  @media screen and (max-width: 1280px) {
-    display: none;
-  }
 `;
 
 export const SolutionImageGroup = styled.div`
   width: 100%;
-  @media screen and (max-width: 1280px) {
-    display: none;
-  }
 `;
