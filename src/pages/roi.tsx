@@ -1,10 +1,11 @@
 import React from "react";
 import { AppLayout } from "@/layouts";
+import * as Section from "@/modules/roi";
 
 const ROICalc: React.FC = () => {
   return (
     <AppLayout name="roi" is_new_book={true}>
-      ROICalc: React.FC
+      <Section.ROITitle />
     </AppLayout>
   );
 };

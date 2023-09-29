@@ -58,7 +58,7 @@ const Home: React.FC = () => {
         subtitle={data?.institution_subtitle ?? "For all Institutions"}
         title={
           data?.institution_title ??
-          "All-in-one learning management solution for institutions "
+          "All-in-one learning management solution for institutions"
         }
       />
       <Section.Discover />

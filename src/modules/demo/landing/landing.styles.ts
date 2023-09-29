@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const LandingWrapper = styled.div`
@@ -72,7 +71,7 @@ export const LandingWaveAnim = styled.div`
   }
 `;
 
-export const LandingLogo = styled(Link)`
+export const LandingLogo = styled.div`
   margin-bottom: 34px;
   cursor: pointer;
 `;

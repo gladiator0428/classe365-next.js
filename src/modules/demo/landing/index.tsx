@@ -1,15 +1,17 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import * as Styled from "./landing.styles";
+import { useRouter } from "next/router";
 
 export const Landing: React.FC = () => {
+  const router = useRouter();
   return (
     <Styled.LandingWrapper>
       <Styled.LandingWaveAnim>
         <div className="wave"></div>
         <div className="wave"></div>
       </Styled.LandingWaveAnim>
-      <Styled.LandingLogo to={"/"}>
+      <Styled.LandingLogo onClick={() => router.push("/")}>
         <img src="/assets/images/logo-white.png" alt="App Logo White" />
       </Styled.LandingLogo>
       <Styled.TitleWrapper>
