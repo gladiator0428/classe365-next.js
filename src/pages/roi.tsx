@@ -6,6 +6,7 @@ const ROICalc: React.FC = () => {
   return (
     <AppLayout name="roi" is_new_book={true}>
       <Section.ROITitle />
+      <Section.ROIStepper />
     </AppLayout>
   );
 };

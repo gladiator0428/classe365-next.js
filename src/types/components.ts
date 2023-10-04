@@ -69,3 +69,8 @@ export type ISeoProps = {
   description?: string;
   image?: string;
 };
+
+export type IStepper = {
+  steps: { label: string }[];
+  activeStep: number;
+};

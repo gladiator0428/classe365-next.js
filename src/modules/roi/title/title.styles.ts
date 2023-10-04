@@ -18,4 +18,15 @@ export const ROITitleWrapper = styled.div`
     font-weight: 400;
     line-height: 24px; /* 133.333% */
   }
+  @media screen and (max-width: 768px) {
+    padding: 40px 0;
+    h1 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
 `;
