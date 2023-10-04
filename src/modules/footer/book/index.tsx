@@ -10,8 +10,9 @@ export const Book: React.FC = () => {
         <h2>Start with</h2>
         <h1>$50/month</h1>
         <p>
-          Customized Solutions for Your Institution's Needs - Pay Only for What
-          You Use
+          {
+            "Customized Solutions for Your Institution's Needs - Pay Only for What You Use"
+          }
         </p>
         <Styled.BookButtoWrapper>
           <Comp.Button bg="#F1F6FA" border="#F1F6FA" font="#6772E5">

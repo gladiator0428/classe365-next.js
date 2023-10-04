@@ -37,9 +37,9 @@ export const ContactForm: React.FC = () => {
             <span>Get in touch</span> with Classe365
           </h1>
           <p>
-            Interested in managing your learner journey digitally? We'd love to
-            hear from you. Reach out to us and our experts will get in touch
-            with you.
+            {
+              "Interested in managing your learner journey digitally? We'd love to hear from you. Reach out to us and our experts will get in touch with you."
+            }
           </p>
           <h3>
             <span>sales@classe365.com</span>{" "}

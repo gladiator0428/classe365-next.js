@@ -175,7 +175,6 @@ export const CostInfoFormValueWrapper = styled.div`
 `;
 
 export const CostInfoFormYearCell = styled.div`
-  margin-right: 16px;
   width: 91px;
   input {
     width: 100%;
@@ -192,7 +191,7 @@ export const CostInfoFormYearCell = styled.div`
 `;
 
 export const CostInfoFormValueCell = styled.div`
-  margin-right: 16px;
+  margin-left: 16px;
   width: 168px;
   display: flex;
   justify-content: center;

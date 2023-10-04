@@ -68,6 +68,7 @@ export const CostInfo: React.FC<Props> = ({ onBack, onNext }) => {
             </p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <input type="text" value="12%" />
@@ -85,6 +86,7 @@ export const CostInfo: React.FC<Props> = ({ onBack, onNext }) => {
             <p>After how many years do you typically refresh software?</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <input type="text" value="3" />
@@ -137,6 +139,7 @@ export const CostInfo: React.FC<Props> = ({ onBack, onNext }) => {
             </p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <input type="text" value="12%" />

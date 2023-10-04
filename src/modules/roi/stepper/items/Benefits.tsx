@@ -23,7 +23,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
       </p>
       <Styled.CostInfoFormGroup>
         <Styled.CardTitle>Cost Information</Styled.CardTitle>
-        <Styled.CostInfoFormRowWrapper>
+        <Styled.CostInfoFormRowWrapper className="header">
           <Styled.CostInfoFormLabel></Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
             <Styled.CostInfoFormValueCell>
@@ -39,6 +39,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>What is your organization’s revenue?</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <span>USD</span>
@@ -58,6 +59,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>What is your organization’s gross profit margin?</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <input type="text" value="12%" />
@@ -81,6 +83,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <h3>Reduce Administrative Costs</h3>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -100,6 +103,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>Total burdened cost of administrative staff</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <span>USD</span>
@@ -119,6 +123,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>% savings in productivity and related cost</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <input type="text" value="12%" />
@@ -136,6 +141,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>Total burdened cost of teachers</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <span>USD</span>
@@ -155,6 +161,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>% savings in productivity and related cost</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <input type="text" value="12%" />
@@ -174,6 +181,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <h3>Reduced cost in stationary, printing & record keeping</h3>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -193,6 +201,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>Average cost of printing and record keeping</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <span>USD</span>
@@ -212,6 +221,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>Average number of pages printed per student/staff</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <input type="text" value="12" />
@@ -229,6 +239,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>Total number of students + staff</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -251,6 +262,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <h3>Reduced cost of running IT Systems</h3>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -270,6 +282,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>Reduced cost in server</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -289,6 +302,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>Total number of on-premises servers required</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <input type="text" value="4" />
@@ -312,6 +326,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <h3>Increase End-User Productivity</h3>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -375,6 +390,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <h3>Real Estate Savings</h3>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -394,6 +410,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>Per Sq/mtr Cost of School building</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -438,6 +455,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <h3>Net New Revenue from e-Commerce Module</h3>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -460,6 +478,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             </p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <span>USD</span>
@@ -482,6 +501,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <h3>Increase Organisation Brand</h3>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper>
                 <span>USD</span>
@@ -505,6 +525,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             </p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <input type="text" value="1%" />
@@ -522,6 +543,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>Potential increase in revenue with adaptive technologies</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -547,6 +569,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <h3>Environmental cost savings</h3>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -566,6 +589,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>Cost per ton/tonne of CO2 of carbon offsets</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -588,6 +612,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             </p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>
@@ -607,6 +632,7 @@ export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
             <p>Co2 offset from energy savings from onpremisis server</p>
           </Styled.CostInfoFormLabel>
           <Styled.CostInfoFormValueWrapper>
+            <Styled.CostInfoFormYearCell></Styled.CostInfoFormYearCell>
             <Styled.CostInfoFormValueCell>
               <Styled.CostInfoFormInputWrapper className="disabled">
                 <span>USD</span>

@@ -8,9 +8,9 @@ export const Access: React.FC = () => {
       <Styled.AccessTextWrapper>
         <h1>Access to Demo Account</h1>
         <p>
-          Did you just want to get access to the demo account? No worries,
-          provide us your information and we'll send login information to our
-          demo platform.
+          {
+            "Did you just want to get access to the demo account? No worries, provide us your information and we'll send login information to our demo platform."
+          }
         </p>
       </Styled.AccessTextWrapper>
       <Styled.AccessFormWrapper>

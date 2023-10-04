@@ -26,10 +26,10 @@ export const ROIStepper: React.FC = () => {
   };
 
   const stepComp = [
-    <Step.OrgInfo onNext={handleNext} />,
-    <Step.CostInfo onNext={handleNext} onBack={handleBack} />,
-    <Step.Benefits onNext={handleNext} onBack={handleBack} />,
-    <Step.Results />,
+    <Step.OrgInfo onNext={handleNext} key={0} />,
+    <Step.CostInfo onNext={handleNext} onBack={handleBack} key={1} />,
+    <Step.Benefits onNext={handleNext} onBack={handleBack} key={2} />,
+    <Step.Results key={3} />,
   ];
   return (
     <Styled.ROIStepperWrapper>
