@@ -72,6 +72,7 @@ export const SolutionContainer = styled.div`
     }
   } */
   @media screen and (max-width: 768px) {
+    position: static;
     .image-wrapper {
       display: none;
     }
@@ -198,4 +199,7 @@ export const SolutionImageWrapper = styled.div<{ bg: string }>`
 
 export const SolutionImageGroup = styled.div`
   width: 100%;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;

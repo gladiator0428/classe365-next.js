@@ -50,7 +50,7 @@ export const Navigation: React.FC<React.HTMLAttributes<HTMLElement>> = ({
     });
 
     if (window.innerWidth > 1024) {
-      if (document.documentElement.scrollTop > 50) {
+      if (document.documentElement.scrollTop > 300) {
         setIsSticky(true);
       } else {
         setIsSticky(false);

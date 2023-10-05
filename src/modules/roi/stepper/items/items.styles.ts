@@ -254,3 +254,114 @@ export const CostInfoButtonWrapper = styled.div`
     margin-left: 16px;
   }
 `;
+
+export const ResultSummaryWrapper = styled.div`
+  display: flex;
+  margin-top: 75px;
+`;
+
+export const ResultSummaryTitle = styled.div`
+  width: 180px;
+  margin-right: 10px;
+  white-space: nowrap;
+  h4 {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 17.987px; /* 112.421% */
+  }
+  div {
+    padding: 34px 0;
+    p {
+      color: #555;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 17.987px; /* 112.421% */
+      &:not(:first-child) {
+        padding-top: 24px;
+      }
+    }
+  }
+  h2 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: #1e2123;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 17.987px; /* 99.93% */
+    margin-top: 12px;
+  }
+`;
+
+export const ResultSummaryYear = styled.div`
+  flex: 1;
+  h2 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e2123;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 17.987px; /* 99.93% */
+    background: #f1f6fa;
+    border-radius: 12px;
+  }
+`;
+
+export const ResultSummaryYearGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 12px;
+  grid-gap: 10px;
+  & > div {
+    background-color: #fafafa;
+    border-radius: 12px;
+    contain: content;
+    h4 {
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f6fa;
+      color: #555;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 17.987px; /* 112.421% */
+    }
+    div {
+      padding: 34px 22px;
+      p {
+        color: #555;
+        text-align: right;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 17.987px; /* 112.421% */
+        &:not(:first-child) {
+          padding-top: 24px;
+        }
+      }
+    }
+  }
+`;
+
+export const ResultSummaryChart = styled.div`
+  margin-left: 20px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  background: #fafafa;
+  padding: 22px 30px;
+  h1 {
+    color: #1e2123;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 17.987px; /* 99.93% */
+  }
+`;

@@ -8,11 +8,11 @@ type Props = {
 
 export const Benefits: React.FC<Props> = ({ onBack, onNext }) => {
   const handleNext = () => {
-    onNext(1);
+    onNext(2);
   };
 
   const handleBack = () => {
-    onBack(1);
+    onBack(2);
   };
   return (
     <Styled.ItemCardWrapper width={1110}>

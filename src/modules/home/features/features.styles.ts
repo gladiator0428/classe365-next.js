@@ -92,13 +92,14 @@ export const FeatureInfo = styled.div`
   img {
     margin-right: 40px;
     width: 125px;
-    image-rendering: pixelated;
+    /* image-rendering: pixelated; */
     height: 125px;
   }
   p {
     color: #1e2123;
     font-size: 18px;
     font-weight: 700;
+    width: calc(100% - 165px);
   }
   @media screen and (max-width: 768px) {
     max-width: 100%;

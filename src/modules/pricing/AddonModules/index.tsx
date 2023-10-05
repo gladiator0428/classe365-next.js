@@ -9,7 +9,7 @@ export const AddonModules: React.FC = () => {
       <h1>Add on Modules</h1>
       <Styled.AddModuleTableWrapper>
         <Styled.AddModuleTableHeader>
-          <div className="row1">Ad-On</div>
+          <div className="row1">Add-On</div>
           <div className="row2">Price</div>
           <div className="row3">Add</div>
         </Styled.AddModuleTableHeader>
