@@ -163,6 +163,10 @@ export const headerLeftNavs = [
         label: "ROI Calculator",
         to: "/roi",
       },
+      {
+        label: "About Us",
+        to: "/about",
+      },
     ],
   },
 ];

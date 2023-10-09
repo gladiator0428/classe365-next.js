@@ -258,6 +258,7 @@ export const CostInfoButtonWrapper = styled.div`
 export const ResultSummaryWrapper = styled.div`
   display: flex;
   margin-top: 75px;
+  margin-bottom: 80px;
 `;
 
 export const ResultSummaryTitle = styled.div`
@@ -354,6 +355,9 @@ export const ResultSummaryYearGrid = styled.div`
 export const ResultSummaryChart = styled.div`
   margin-left: 20px;
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
   border-radius: 12px;
   background: #fafafa;
@@ -363,5 +367,246 @@ export const ResultSummaryChart = styled.div`
     font-size: 18px;
     font-weight: 700;
     line-height: 17.987px; /* 99.93% */
+  }
+  & > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    svg {
+      & > rect {
+        fill: transparent;
+      }
+    }
+  }
+`;
+
+export const ResultPotentialWrapper = styled.div`
+  margin-top: 48px;
+  display: flex;
+  padding-bottom: 80px;
+`;
+
+export const ResultPotentialContainer = styled.div`
+  padding-right: 12px;
+  flex: 1;
+  margin-right: 20px;
+  h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative;
+    span {
+      z-index: 1;
+    }
+    &::after {
+      background: #f1f6fa;
+      border-radius: 12px;
+      content: "";
+      position: absolute;
+      left: -12px;
+      right: -12px;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  div {
+    &:not(.last-child) {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    &.last-child {
+      margin-bottom: 44px;
+    }
+    h3 {
+      color: #1e2123;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 17.987px; /* 99.93% */
+    }
+    p {
+      display: flex;
+      justify-content: space-between;
+      color: #555;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 17.987px; /* 112.421% */
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+  }
+`;
+
+export const ResultPotentialChart = styled.div`
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  background: #fafafa;
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  svg {
+    & > rect {
+      fill: transparent;
+    }
+  }
+`;
+
+export const ResultBenefitWrapper = styled.div`
+  padding-bottom: 80px;
+  margin-top: 48px;
+`;
+
+export const ResultBenefitItem = styled.div`
+  &:not(.last-child) {
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  &.last-child {
+    margin-bottom: 44px;
+  }
+`;
+
+export const ResultBenefitRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  &:first-child {
+    margin-bottom: 32px;
+  }
+  &:not(:first-child) {
+    margin-top: 24px;
+  }
+  h3 {
+    color: #1e2123;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 17.987px; /* 99.93% */
+  }
+  p {
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 17.987px; /* 112.421% */
+  }
+  div {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20px;
+    & > * {
+      width: 84px;
+      text-align: right;
+      &:not(:first-child) {
+        margin-left: 32px;
+      }
+    }
+  }
+  &.subtotal,
+  &.total {
+    position: relative;
+    padding: 20px 0;
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: -12px;
+      right: -12px;
+      border-radius: 12px;
+    }
+  }
+  &.subtotal {
+    &::after {
+      background: #fafafa;
+    }
+  }
+  &.total {
+    margin-top: 12px;
+    &::after {
+      background: #f1f6fa;
+    }
+  }
+`;
+
+export const ResultCostWrapper = styled.div`
+  display: flex;
+`;
+
+export const ResultCostTitle = styled.div`
+  width: 294px;
+  header {
+    height: 46px;
+    border-radius: 12px 12px 0 0;
+    background: #fafafa;
+  }
+  div {
+    padding: 32px 0;
+    p,
+    h3 {
+      display: flex;
+      justify-content: space-between;
+      color: #555;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 17.987px; /* 112.421% */
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+    h3 {
+      color: #1e2123;
+      font-weight: 500;
+      span:first-child {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 17.987px; /* 99.93% */
+      }
+    }
+  }
+`;
+
+export const ResultCostGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 14px;
+  grid-gap: 10px;
+`;
+
+export const ResultCostGridItem = styled.div`
+  width: 129px;
+  background-color: #fafafa;
+  border-radius: 0cap;
+  header {
+    background-color: #f1f6fa;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+  }
+  div {
+    padding: 32px 22px;
+    p,
+    h3 {
+      color: #555;
+      text-align: right;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 17.987px; /* 112.421% */
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+    h3 {
+      font-weight: 700;
+      color: #1e2123;
+    }
   }
 `;

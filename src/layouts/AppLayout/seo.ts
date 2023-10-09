@@ -27,6 +27,7 @@ export const seo_lists: { [any: string]: ISeoProps } = {
     image: "",
   },
   contact: { title: "", description: "", image: "" },
+  about: { title: "", description: "", image: "" },
   solution_feature_alumni: {
     title: "",
     description: "",

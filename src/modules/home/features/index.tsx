@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode } from "swiper/modules";
+import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import { STRAPI_API } from "@/config";
 import * as Comp from "@/components";
 import * as Styled from "./features.styles";
@@ -58,12 +58,13 @@ export const Features: React.FC<Props> = ({
         <Swiper
           spaceBetween={24}
           autoplay={{
-            delay: 2500,
+            delay: 10000,
             disableOnInteraction: false,
           }}
+          pagination={{ clickable: true }}
           loop
           className="mySwiper"
-          modules={[Autoplay]}
+          modules={[Autoplay, Pagination]}
         >
           <SwiperSlide>
             {data

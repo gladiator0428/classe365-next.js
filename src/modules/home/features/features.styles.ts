@@ -29,6 +29,9 @@ export const FeaturesContentWrapper = styled.div`
     flex-wrap: wrap;
     gap: 24px;
   }
+  .mySwiper {
+    padding-bottom: 50px;
+  }
   @media screen and (max-width: 768px) {
     display: none;
   }
