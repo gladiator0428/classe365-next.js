@@ -4,7 +4,7 @@ export const FeaturesWrapper = styled.div`
   max-width: 1240px;
   width: 95%;
   margin: auto;
-  padding: 110px 0;
+  padding: 70px 0;
   @media screen and (max-width: 768px) {
     padding: 0 0 56px;
   }
@@ -12,7 +12,7 @@ export const FeaturesWrapper = styled.div`
 
 export const FeaturesInfoWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
   margin-bottom: 65px;
   @media screen and (max-width: 768px) {
@@ -30,7 +30,15 @@ export const FeaturesContentWrapper = styled.div`
     gap: 24px;
   }
   .mySwiper {
-    padding-bottom: 50px;
+    padding-bottom: 70px;
+    .swiper-pagination-bullet {
+      width: 14px;
+      height: 14px;
+      background-color: #f1f6fa;
+      &.swiper-pagination-bullet-active {
+        background-color: #6772e5;
+      }
+    }
   }
   @media screen and (max-width: 768px) {
     display: none;
@@ -49,9 +57,10 @@ export const FeaturesSwiper = styled.div`
 `;
 
 export const FeaturesDescription = styled.div`
-  max-width: 482px;
+  max-width: 612px;
   width: 100%;
   color: #1e2123;
+  text-align: center;
   h2 {
     font-size: 36px;
     font-weight: 700;
@@ -61,10 +70,6 @@ export const FeaturesDescription = styled.div`
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-  }
-  img {
-    width: 48px;
-    height: 48px;
   }
   @media screen and (max-width: 768px) {
     max-width: 100%;

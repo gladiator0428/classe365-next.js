@@ -28,7 +28,6 @@ export const Features: React.FC<Props> = ({
   icon,
   image,
   subtitle,
-  text,
   title,
 }) => {
   return (
@@ -44,15 +43,6 @@ export const Features: React.FC<Props> = ({
           <h2>{subtitle}</h2>
           <p>{title}</p>
         </Styled.FeaturesDescription>
-        <Styled.FeatureInfo>
-          <Image
-            src={image?.url ? STRAPI_API + image?.url : image}
-            alt="Feature"
-            width={125}
-            height={125}
-          />
-          <p>{text}</p>
-        </Styled.FeatureInfo>
       </Styled.FeaturesInfoWrapper>
       <Styled.FeaturesContentWrapper>
         <Swiper

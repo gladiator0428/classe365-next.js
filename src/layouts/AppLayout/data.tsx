@@ -1,12 +1,17 @@
-import { GrAnnounce } from "react-icons/gr";
+import { GrAnnounce, GrTextWrap } from "react-icons/gr";
 import { TbEdit } from "react-icons/tb";
 import { IoSettingsOutline, IoSchoolOutline } from "react-icons/io5";
 import { PiPresentation, PiToolbox } from "react-icons/pi";
 import { CiDollar } from "react-icons/ci";
 import { HiOutlineChip } from "react-icons/hi";
-import { LuFileEdit } from "react-icons/lu";
+import { LuFileEdit, LuKeyRound, LuPhoneCall } from "react-icons/lu";
 import { GiWhiteBook } from "react-icons/gi";
 import { FaChalkboardUser } from "react-icons/fa6";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import { BiBuildings, BiCodeAlt } from "react-icons/bi";
+import { FiPlayCircle } from "react-icons/fi";
+import { BsBagHeart, BsShield } from "react-icons/bs";
+import { LiaListAltSolid } from "react-icons/lia";
 
 export const headerLeftNavs = [
   {
@@ -22,37 +27,44 @@ export const headerLeftNavs = [
         to: "/",
         subMenu: [
           {
-            label: "Marketing",
+            label: "Marketing Teams",
+            desc: "CRM software to boost your marketing",
             to: "/solution/team/marketing",
             icon: <GrAnnounce />,
           },
           {
-            label: "Registrar",
+            label: "Registrars",
+            desc: "From admissions to finance",
             to: "/solution/team/register",
             icon: <TbEdit />,
           },
           {
-            label: "Administrator",
+            label: "Administrators",
+            desc: "Effective student performance tracking",
             to: "/solution/team/administrator",
             icon: <IoSettingsOutline />,
           },
           {
             label: "Teachers",
+            desc: "Make learning fun and interactive",
             to: "/solution/team/teacher",
             icon: <PiPresentation />,
           },
           {
-            label: "CFO",
+            label: "CFOs",
+            desc: "Online financial management",
             to: "/solution/team/cfo",
             icon: <CiDollar />,
           },
           {
-            label: "IT Leaders",
+            label: "CTOs",
+            desc: "CTO-focused platform",
             to: "/solution/team/it",
             icon: <HiOutlineChip />,
           },
           {
             label: "Business Leaders",
+            desc: "Performance-optimizing tech",
             to: "/solution/team/business",
             icon: <PiToolbox />,
           },
@@ -64,21 +76,25 @@ export const headerLeftNavs = [
         subMenu: [
           {
             label: "Academies",
+            desc: "Lorem ipsum dolor sit amet consectetur.",
             to: "/solution/institutes/academies",
             icon: <LuFileEdit />,
           },
           {
             label: "Schools",
+            desc: "Lorem ipsum dolor sit amet consectetur.",
             to: "/solution/institutes/school",
             icon: <GiWhiteBook />,
           },
           {
             label: "Universities & Higher Education",
+            desc: "Lorem ipsum dolor sit amet consectetur.",
             to: "/solution/institutes/universities",
             icon: <IoSchoolOutline />,
           },
           {
             label: "Corporate Learining",
+            desc: "Lorem ipsum dolor sit amet consectetur.",
             to: "/solution/institutes/corporate",
             icon: <FaChalkboardUser />,
           },
@@ -156,16 +172,66 @@ export const headerLeftNavs = [
     to: "/",
     subMenu: [
       {
-        label: "Demo",
-        to: "/demo",
+        label: "Resources",
+        to: "/",
+        subMenu: [
+          {
+            label: "Help Docs",
+            to: "/help",
+            icon: <AiOutlineInfoCircle />,
+          },
+          {
+            label: "Demo & Webinars",
+            to: "/demo",
+            icon: <BiCodeAlt />,
+          },
+          {
+            label: "APIs",
+            to: "/apis",
+            icon: <FiPlayCircle />,
+          },
+          {
+            label: "Blog",
+            to: "/blog",
+            icon: <GrTextWrap />,
+          },
+        ],
       },
       {
-        label: "ROI Calculator",
-        to: "/roi",
-      },
-      {
-        label: "About Us",
-        to: "/about",
+        label: "Company",
+        to: "/",
+        subMenu: [
+          {
+            label: "About Us",
+            to: "/about",
+            icon: <BiBuildings />,
+          },
+          {
+            label: "Careers",
+            to: "/careers",
+            icon: <BsBagHeart />,
+          },
+          {
+            label: "Contact",
+            to: "/contact",
+            icon: <LuPhoneCall />,
+          },
+          {
+            label: "Privacy Policy",
+            to: "/privacy",
+            icon: <BsShield />,
+          },
+          {
+            label: "Terms & Conditions",
+            to: "/terms",
+            icon: <LiaListAltSolid />,
+          },
+          {
+            label: "Data Security",
+            to: "/security",
+            icon: <LuKeyRound />,
+          },
+        ],
       },
     ],
   },

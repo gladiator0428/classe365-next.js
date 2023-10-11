@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { BsChevronDown, BsChevronRight } from "react-icons/bs";
 import type * as Type from "@/types";
 import * as Styled from "./navItem.styles";
+import { headerLeftNavs } from "@/layouts/AppLayout/data";
+import Image from "next/image";
 
 export const NavItem: React.FC<Type.INavItemProps> = ({
   label,
@@ -13,6 +15,7 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
   const [isActive, setIsActive] = useState("no-submenu");
   const [width, setWidth] = useState(0);
   const [isSubActive, setIsSubActive] = useState("no-submenu");
+  const [megaMenu, setMegaMenu] = useState("");
   const wrapperRef = useRef<any>(null);
 
   useEffect(() => {
@@ -33,8 +36,10 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
      */
     const handleClickOutside = (event: any) => {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+        console.log("first");
         setIsSubActive("no-submenu");
         setIsActive("no-submenu");
+        setMegaMenu("");
       }
     };
     // Bind the event listener
@@ -45,12 +50,27 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
     };
   }, [wrapperRef]);
 
+  useEffect(() => {
+    if (!megaMenu) {
+      document.documentElement.style.overflow = "auto";
+      document.documentElement.style.paddingRight = "0";
+    } else {
+      document.documentElement.style.overflow = "hidden";
+      document.documentElement.style.paddingRight = "17px";
+      window.scrollTo({ top: 0 });
+    }
+  }, [megaMenu]);
+
   const handleNavClick = () => {
     if (subMenu) {
-      setIsActive((prev) => {
-        setIsSubActive("no-submenu");
-        return prev === label ? "no-submenu" : label;
-      });
+      if (width > 1024) {
+        setMegaMenu((prev) => (prev === label ? "" : label));
+      } else {
+        setIsActive((prev) => {
+          setIsSubActive("no-submenu");
+          return prev === label ? "no-submenu" : label;
+        });
+      }
     } else {
       setIsActive("no-submenu");
       setIsSubActive("no-submenu");
@@ -64,46 +84,92 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
         <span>{label}</span>
         {subMenu && <BsChevronDown size={11} />}
       </Styled.NavLabel>
-      <Styled.SubMenuWrapper active={isActive === label ? "true" : undefined}>
-        {subMenu?.map((item, key) => (
-          <Styled.SubMenuItemWrapper
-            key={key}
-            onMouseEnter={() =>
-              width > 1024
-                ? item.subMenu
-                  ? setIsSubActive(item.label)
+      {width <= 1024 ? (
+        <Styled.SubMenuWrapper active={isActive === label ? "true" : undefined}>
+          {subMenu?.map((item, key) => (
+            <Styled.SubMenuItemWrapper
+              key={key}
+              onMouseEnter={() =>
+                width > 1024
+                  ? item.subMenu
+                    ? setIsSubActive(item.label)
+                    : null
                   : null
-                : null
-            }
-            onMouseLeave={() => setIsSubActive("no-submenu")}
-            onClick={() =>
-              item.subMenu
-                ? width > 1024
-                  ? {}
-                  : setIsSubActive((prev) =>
-                      prev === item.label ? "no-submenu" : item.label
-                    )
-                : router.push(item.to)
-            }
-          >
-            <span>{item.label}</span>
-            {item.subMenu ? <BsChevronRight size={11} /> : null}
-            <Styled.SubMenuWrapper
-              active={isSubActive === item.label ? "true" : undefined}
-              className="sub-menu"
+              }
+              onMouseLeave={() => setIsSubActive("no-submenu")}
+              onClick={() =>
+                item.subMenu
+                  ? width > 1024
+                    ? {}
+                    : setIsSubActive((prev) =>
+                        prev === item.label ? "no-submenu" : item.label
+                      )
+                  : router.push(item.to)
+              }
             >
-              {item?.subMenu?.map((item1: any, key1: number) => (
-                <Styled.SubMenuItemWrapper
-                  key={key1}
-                  onClick={() => (item1.subMenu ? {} : router.push(item1.to))}
-                >
-                  {item1.label}
-                </Styled.SubMenuItemWrapper>
-              ))}
-            </Styled.SubMenuWrapper>
-          </Styled.SubMenuItemWrapper>
-        ))}
-      </Styled.SubMenuWrapper>
+              <span>{item.label}</span>
+              {item.subMenu ? <BsChevronRight size={11} /> : null}
+              <Styled.SubMenuWrapper
+                active={isSubActive === item.label ? "true" : undefined}
+                className="sub-menu"
+              >
+                {item?.subMenu?.map((item1: any, key1: number) => (
+                  <Styled.SubMenuItemWrapper
+                    key={key1}
+                    onClick={() => (item1.subMenu ? {} : router.push(item1.to))}
+                  >
+                    {item1.label}
+                  </Styled.SubMenuItemWrapper>
+                ))}
+              </Styled.SubMenuWrapper>
+            </Styled.SubMenuItemWrapper>
+          ))}
+        </Styled.SubMenuWrapper>
+      ) : (
+        <Styled.MegaMenuWrapper>
+          {megaMenu === "Solutions" && (
+            <Styled.SolutionsMegaMenuWrapper>
+              {headerLeftNavs
+                .filter((f) => f.label === megaMenu)[0]
+                .subMenu?.map((mItem: any, mKey) => (
+                  <Styled.SolutionsMegaMenuGridItem key={mKey}>
+                    <h1>{mItem.label}</h1>
+                    {mItem?.subMenu.map((sItem: any, sKey: any) => (
+                      <Styled.MegaMenuItemWrapper
+                        key={sKey}
+                        className={sItem.desc ? "" : "no-desc"}
+                        onClick={() => {
+                          setMegaMenu("");
+                          router.push(sItem.to);
+                        }}
+                      >
+                        <div className="icon-wrapper">
+                          {sItem.icon ? (
+                            sItem.icon
+                          ) : (
+                            <Image
+                              src={sItem.image}
+                              width={20}
+                              height={20}
+                              alt="image"
+                            />
+                          )}
+                        </div>
+                        <div className={`item-container`}>
+                          <h3>{sItem.label}</h3>
+                          <p>{sItem.desc}</p>
+                        </div>
+                      </Styled.MegaMenuItemWrapper>
+                    ))}
+                  </Styled.SolutionsMegaMenuGridItem>
+                ))}
+            </Styled.SolutionsMegaMenuWrapper>
+          )}
+          {megaMenu === "More" && (
+            <Styled.MoreMegaMenuWrapper>a</Styled.MoreMegaMenuWrapper>
+          )}
+        </Styled.MegaMenuWrapper>
+      )}
     </Styled.NavItemWrapper>
   );
 };

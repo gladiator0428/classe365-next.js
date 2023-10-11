@@ -30,7 +30,7 @@ export const StepperWrapper = styled.div`
     width: 64px;
     height: 64px;
   }
-  .ConnectorContainer-0-2-20 {
+  #RFS-ConnectorContainer {
     top: calc((64px - 3px) / 2);
     left: calc(-50% + 40px);
     right: calc(50% + 40px);
@@ -39,7 +39,7 @@ export const StepperWrapper = styled.div`
       border-width: 3px;
     }
   }
-  .LabelContainer-0-2-10 {
+  #RFS-LabelContainer {
     span {
       color: #fff;
       text-align: center;
@@ -56,7 +56,7 @@ export const StepperWrapper = styled.div`
         font-size: 20px;
       }
     }
-    .ConnectorContainer-0-2-20 {
+    #RFS-ConnectorContainer {
       top: calc((50px - 3px) / 2);
       left: calc(-50% + 30px);
       right: calc(50% + 30px);
@@ -65,7 +65,7 @@ export const StepperWrapper = styled.div`
         border-width: 3px;
       }
     }
-    .LabelContainer-0-2-10 {
+    #RFS-LabelContainer {
       span {
         font-size: 12px;
       }
