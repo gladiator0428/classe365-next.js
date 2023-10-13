@@ -166,7 +166,77 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
             </Styled.SolutionsMegaMenuWrapper>
           )}
           {megaMenu === "More" && (
-            <Styled.MoreMegaMenuWrapper>a</Styled.MoreMegaMenuWrapper>
+            <Styled.MoreMegaMenuWrapper>
+              <Styled.MoreMegaMenuGrid>
+                {headerLeftNavs
+                  .filter((f) => f.label === megaMenu)[0]
+                  .subMenu?.map((mItem: any, mKey) => (
+                    <Styled.SolutionsMegaMenuGridItem key={mKey}>
+                      <h1>{mItem.label}</h1>
+                      {mItem?.subMenu.map((sItem: any, sKey: any) => (
+                        <Styled.MegaMenuItemWrapper
+                          key={sKey}
+                          className={sItem.desc ? "" : "no-desc"}
+                          onClick={() => {
+                            setMegaMenu("");
+                            router.push(sItem.to);
+                          }}
+                        >
+                          <div className="icon-wrapper">
+                            {sItem.icon ? (
+                              sItem.icon
+                            ) : (
+                              <Image
+                                src={sItem.image}
+                                width={20}
+                                height={20}
+                                alt="image"
+                              />
+                            )}
+                          </div>
+                          <div className={`item-container`}>
+                            <h3>{sItem.label}</h3>
+                            <p>{sItem.desc}</p>
+                          </div>
+                        </Styled.MegaMenuItemWrapper>
+                      ))}
+                    </Styled.SolutionsMegaMenuGridItem>
+                  ))}
+              </Styled.MoreMegaMenuGrid>
+              <Styled.MoreMegaMenuGitaWrapper>
+                <Styled.MoreMegaMenuROI onClick={() => router.push("/roi")}>
+                  <div>
+                    <h3>ROI Calculator</h3>
+                    <p>
+                      {
+                        "We’ve developed a one-of-its-kind calculator exclusively for educational institutions."
+                      }
+                    </p>
+                  </div>
+                  <Image
+                    src={"/assets/images/menu/roi.png"}
+                    width={99}
+                    height={90}
+                    alt="roi"
+                  />
+                </Styled.MoreMegaMenuROI>
+                <Styled.MoreMegaMenuPlaybook
+                  onClick={() => router.push("/playbook")}
+                >
+                  <h3>Digital Transformation Playbook </h3>
+                  <Image
+                    src={"/assets/images/menu/playbook.png"}
+                    width={186}
+                    height={67}
+                    alt="playbook"
+                  />
+                  <p>
+                    Developed through intense research, this framework will help
+                    you achieve 100% digital transformation at your institution
+                  </p>
+                </Styled.MoreMegaMenuPlaybook>
+              </Styled.MoreMegaMenuGitaWrapper>
+            </Styled.MoreMegaMenuWrapper>
           )}
         </Styled.MegaMenuWrapper>
       )}

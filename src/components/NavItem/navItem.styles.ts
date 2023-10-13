@@ -100,11 +100,64 @@ export const SolutionsMegaMenuWrapper = styled.div`
 
 export const MoreMegaMenuWrapper = styled.div`
   max-width: 1020px;
+  display: flex;
   width: 95%;
   border-radius: 12px;
   background: #fff;
   padding: 40px;
   box-shadow: 0px 4px 20px 0px rgba(84, 84, 84, 0.25);
+`;
+
+export const MoreMegaMenuROI = styled.div`
+  background: #d4c7ff;
+  cursor: pointer;
+  margin-bottom: 16px;
+  padding: 20px 16px;
+  display: flex;
+  border-radius: 12px;
+  div {
+    padding-right: 20px;
+  }
+`;
+
+export const MoreMegaMenuPlaybook = styled.div`
+  background: #f1f6fa;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    width: 100%;
+  }
+  p {
+    margin-top: 14px;
+  }
+`;
+
+export const MoreMegaMenuGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+`;
+
+export const MoreMegaMenuGitaWrapper = styled.div`
+  max-width: 344px;
+  width: 100%;
+  margin-left: 40px;
+  h3 {
+    color: #1e2123;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  p {
+    color: #3b3f42;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+  }
 `;
 
 export const SolutionsMegaMenuGridItem = styled.div`

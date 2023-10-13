@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const LoadingWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 100vh;
   * {
     border: 0;
     box-sizing: border-box;
@@ -23,6 +22,9 @@ export const LoadingWrapper = styled.div`
     display: flex;
     font: 1em/1.5 sans-serif;
     height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
     transition: background-color var(--trans-dur), color var(--trans-dur);
   }
   .pl {

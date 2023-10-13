@@ -107,7 +107,7 @@ export const headerLeftNavs = [
           {
             label: "Pre-Adminssion & Enrolment",
             to: "/solution/features/pre",
-            image: "/assets/images/shapes/pre-admission.png",
+            image: "/assets/images/shapes/Preadmission.png",
           },
           {
             label: "Customer Relationship Management",
