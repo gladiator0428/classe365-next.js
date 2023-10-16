@@ -8,7 +8,7 @@ export const FeatureCardWrapper = styled.div`
   align-items: center;
   display: flex;
   img {
-    height: 76px;
+    height: 71px;
     width: auto;
     margin-right: 16px;
   }

@@ -11,7 +11,6 @@ export const DiscoverCard: React.FC<IDiscoverCardProps> = (props) => {
         <p>{props.description}</p>
       </Styled.DiscoverContent>
       <Styled.DiscoverOwner>
-        {/* <img src={props.avatar} alt="Avatar" /> */}
         <h4>source - Capterra</h4>
         <h5>{props.name}</h5>
         <p>{props.role}</p>

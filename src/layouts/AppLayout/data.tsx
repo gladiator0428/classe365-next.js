@@ -1,17 +1,11 @@
-import { GrAnnounce, GrTextWrap } from "react-icons/gr";
-import { TbEdit } from "react-icons/tb";
-import { IoSettingsOutline, IoSchoolOutline } from "react-icons/io5";
-import { PiPresentation, PiToolbox } from "react-icons/pi";
-import { CiDollar } from "react-icons/ci";
-import { HiOutlineChip } from "react-icons/hi";
-import { LuFileEdit, LuKeyRound, LuPhoneCall } from "react-icons/lu";
-import { GiWhiteBook } from "react-icons/gi";
-import { FaChalkboardUser } from "react-icons/fa6";
+import { GrTextWrap } from "react-icons/gr";
+import { LuKeyRound, LuPhoneCall } from "react-icons/lu";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { BiBuildings, BiCodeAlt } from "react-icons/bi";
 import { FiPlayCircle } from "react-icons/fi";
 import { BsBagHeart, BsShield } from "react-icons/bs";
 import { LiaListAltSolid } from "react-icons/lia";
+import * as Icon from "@/components/SVGs/menu";
 
 export const headerLeftNavs = [
   {
@@ -30,43 +24,43 @@ export const headerLeftNavs = [
             label: "Marketing Teams",
             desc: "CRM software to boost your marketing",
             to: "/solution/team/marketing",
-            icon: <GrAnnounce />,
+            icon: <Icon.MarketingIcon />,
           },
           {
             label: "Registrars",
             desc: "From admissions to finance",
             to: "/solution/team/register",
-            icon: <TbEdit />,
+            icon: <Icon.RegistrarsIcon />,
           },
           {
             label: "Administrators",
             desc: "Effective student performance tracking",
             to: "/solution/team/administrator",
-            icon: <IoSettingsOutline />,
+            icon: <Icon.AdministratorsIcon />,
           },
           {
             label: "Teachers",
             desc: "Make learning fun and interactive",
             to: "/solution/team/teacher",
-            icon: <PiPresentation />,
+            icon: <Icon.TeachersIcon />,
           },
           {
             label: "CFOs",
             desc: "Online financial management",
             to: "/solution/team/cfo",
-            icon: <CiDollar />,
+            icon: <Icon.CFOIcon />,
           },
           {
             label: "CTOs",
             desc: "CTO-focused platform",
             to: "/solution/team/it",
-            icon: <HiOutlineChip />,
+            icon: <Icon.CTOIcon />,
           },
           {
             label: "Business Leaders",
             desc: "Performance-optimizing tech",
             to: "/solution/team/business",
-            icon: <PiToolbox />,
+            icon: <Icon.BusinessIcon />,
           },
         ],
       },
@@ -78,25 +72,25 @@ export const headerLeftNavs = [
             label: "Academies",
             desc: "Lorem ipsum dolor sit amet consectetur.",
             to: "/solution/institutes/academies",
-            icon: <LuFileEdit />,
+            icon: <Icon.AcademiesIcon />,
           },
           {
             label: "Schools",
             desc: "Lorem ipsum dolor sit amet consectetur.",
             to: "/solution/institutes/school",
-            icon: <GiWhiteBook />,
+            icon: <Icon.SchoolsIcon />,
           },
           {
             label: "Universities & Higher Education",
             desc: "Lorem ipsum dolor sit amet consectetur.",
             to: "/solution/institutes/universities",
-            icon: <IoSchoolOutline />,
+            icon: <Icon.UniversitiesIcon />,
           },
           {
             label: "Corporate Learining",
             desc: "Lorem ipsum dolor sit amet consectetur.",
             to: "/solution/institutes/corporate",
-            icon: <FaChalkboardUser />,
+            icon: <Icon.CorporateIcon />,
           },
         ],
       },
