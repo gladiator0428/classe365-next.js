@@ -50,16 +50,16 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
     };
   }, [wrapperRef]);
 
-  useEffect(() => {
-    if (!megaMenu) {
-      document.documentElement.style.overflow = "auto";
-      document.documentElement.style.paddingRight = "0";
-    } else {
-      document.documentElement.style.overflow = "hidden";
-      document.documentElement.style.paddingRight = "17px";
-      window.scrollTo({ top: 0 });
-    }
-  }, [megaMenu]);
+  // useEffect(() => {
+  //   if (!megaMenu) {
+  //     document.documentElement.style.overflow = "auto";
+  //     document.documentElement.style.paddingRight = "0";
+  //   } else {
+  //     document.documentElement.style.overflow = "hidden";
+  //     document.documentElement.style.paddingRight = "17px";
+  //     window.scrollTo({ top: 0 });
+  //   }
+  // }, [megaMenu]);
 
   const handleNavClick = () => {
     if (subMenu) {
@@ -79,8 +79,15 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
   };
 
   return (
-    <Styled.NavItemWrapper ref={wrapperRef}>
-      <Styled.NavLabel onClick={handleNavClick}>
+    <Styled.NavItemWrapper
+      ref={wrapperRef}
+      onMouseEnter={subMenu ? handleNavClick : () => {}}
+      onMouseLeave={subMenu ? handleNavClick : () => {}}
+    >
+      <Styled.NavLabel
+        // onMouseLeave={subMenu ? handleNavClick : () => {}}
+        onClick={handleNavClick}
+      >
         <span>{label}</span>
         {subMenu && <BsChevronDown size={11} />}
       </Styled.NavLabel>
@@ -126,7 +133,7 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
           ))}
         </Styled.SubMenuWrapper>
       ) : (
-        <Styled.MegaMenuWrapper>
+        <Styled.MegaMenuWrapper className={megaMenu ? "open" : ""}>
           {megaMenu === "Solutions" && (
             <Styled.SolutionsMegaMenuWrapper>
               {headerLeftNavs

@@ -3,7 +3,6 @@ import { styled } from "styled-components";
 export const NavItemWrapper = styled.div`
   display: flex;
   align-items: center;
-  position: relative;
   z-index: 10;
   @media screen and (max-width: 1024px) {
     cursor: pointer;
@@ -76,32 +75,40 @@ export const SubMenuItemWrapper = styled.div`
 `;
 
 export const MegaMenuWrapper = styled.div`
-  position: fixed;
-  top: 80px;
+  position: absolute;
+  padding-top: 0;
+  top: 50px;
   left: 0;
   right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 17px;
+  &.open {
+    padding-top: 30px;
+  }
+  /* margin-right: 17px; */
 `;
 
 export const SolutionsMegaMenuWrapper = styled.div`
-  max-width: 1240px;
-  width: 95%;
+  max-width: 1020px;
+  width: 100%;
   border-radius: 12px;
   background: #fff;
   padding: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
+  grid-gap: 10px;
   box-shadow: 0px 4px 20px 0px rgba(84, 84, 84, 0.25);
+  position: relative;
+  z-index: 1;
 `;
 
 export const MoreMegaMenuWrapper = styled.div`
   max-width: 1020px;
+  position: relative;
+  z-index: 1;
   display: flex;
-  width: 95%;
+  width: 100%;
   border-radius: 12px;
   background: #fff;
   padding: 40px;
@@ -170,9 +177,9 @@ export const SolutionsMegaMenuGridItem = styled.div`
 `;
 
 export const MegaMenuItemWrapper = styled.div`
-  padding: 16px;
+  padding: 10px 12px;
   &.no-desc {
-    padding: 8px 16px;
+    padding: 5px 12px;
   }
   border-radius: 6px;
   background: transparent;
@@ -196,13 +203,13 @@ export const MegaMenuItemWrapper = styled.div`
   .item-container {
     h3 {
       color: #3b3f42;
-      font-size: 16px;
+      font-size: 14px;
       transition: all 0.3s;
       font-weight: 600;
     }
     p {
       color: #7c7c7c;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 400;
       margin-top: 4px;
     }

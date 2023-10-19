@@ -7,6 +7,7 @@ export const AppContentWrapper = styled.div`
 `;
 
 export const HeaderWrapper = styled.div`
+  position: relative;
   max-width: 1240px;
   z-index: 10;
   width: 95%;
