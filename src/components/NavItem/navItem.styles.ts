@@ -180,9 +180,7 @@ export const MegaMenuItemWrapper = styled.div`
   transition: all 0.3s;
   display: flex;
   align-items: center;
-  &:hover {
-    background: #fafafa;
-  }
+
   .icon-wrapper {
     width: 36px;
     height: 36px;
@@ -199,6 +197,7 @@ export const MegaMenuItemWrapper = styled.div`
     h3 {
       color: #3b3f42;
       font-size: 16px;
+      transition: all 0.3s;
       font-weight: 600;
     }
     p {
@@ -206,6 +205,15 @@ export const MegaMenuItemWrapper = styled.div`
       font-size: 14px;
       font-weight: 400;
       margin-top: 4px;
+    }
+  }
+  &:hover {
+    background: #fafafa;
+
+    .item-container {
+      h3 {
+        color: #6772e5;
+      }
     }
   }
 `;

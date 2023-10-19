@@ -18,10 +18,8 @@ export const Grid: React.FC<Props> = ({ data }) => {
       {data?.map((item, index) => (
         <Styled.GridItemWrapper key={index}>
           <div>
-            <h2>{item.title}</h2>
-            <div>
-              <img src={STRAPI_API + item.image?.url} alt="" />
-            </div>
+            {/* <h2>{item.title}</h2> */}
+            <img src={STRAPI_API + item.image?.url} alt="" />
           </div>
           <div>
             <p className={collapse === index ? "active" : ""}>

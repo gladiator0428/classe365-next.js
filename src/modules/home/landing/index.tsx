@@ -21,7 +21,6 @@ export const Landing: React.FC<Props> = ({
 
   useEffect(() => {
     if (title_array.length > 0) {
-      console.log(title_data);
       setTitle_data(title_array);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

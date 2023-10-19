@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 export const GridWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 12px;
   & > :nth-child(odd) {
     & > div:first-child {
       background: #a389f4;
@@ -29,43 +30,14 @@ export const GridWrapper = styled.div`
 
 export const GridItemWrapper = styled.div`
   & > div:first-child {
-    padding-top: 43px;
-    height: 436px;
+    /* height: 436px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    h2 {
-      max-width: 310px;
-      margin: 0 auto;
-      text-align: center;
-      color: #fff;
-      font-size: 24px;
-      font-weight: 700;
-    }
-    & > div {
-      display: flex;
-      justify-content: center;
 
+    img {
       width: 100%;
-      max-height: 300px;
-      margin: 0 auto;
-      img {
-        width: 98%;
-        max-width: 295px;
-        height: auto;
-      }
-    }
-  }
-  &:first-child > div > div {
-    justify-content: flex-start;
-    img {
-      max-width: 340px;
-    }
-  }
-  &:last-child > div > div {
-    justify-content: flex-end;
-    img {
-      max-width: 340px;
+      height: auto;
     }
   }
 

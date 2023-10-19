@@ -14,6 +14,7 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
   const router = useRouter();
   const [isActive, setIsActive] = useState("no-submenu");
   const [width, setWidth] = useState(0);
+  const [hoveredMenu, setHoveredMenu] = useState(-1);
   const [isSubActive, setIsSubActive] = useState("no-submenu");
   const [megaMenu, setMegaMenu] = useState("");
   const wrapperRef = useRef<any>(null);
@@ -36,7 +37,6 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
      */
     const handleClickOutside = (event: any) => {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-        console.log("first");
         setIsSubActive("no-submenu");
         setIsActive("no-submenu");
         setMegaMenu("");
@@ -142,10 +142,16 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
                           setMegaMenu("");
                           router.push(sItem.to);
                         }}
+                        onMouseEnter={() => setHoveredMenu(sKey)}
+                        onMouseLeave={() => setHoveredMenu(-1)}
                       >
                         <div className="icon-wrapper">
                           {sItem.icon ? (
-                            sItem.icon
+                            hoveredMenu === sKey ? (
+                              sItem.hoverIcon
+                            ) : (
+                              sItem.icon
+                            )
                           ) : (
                             <Image
                               src={sItem.image}

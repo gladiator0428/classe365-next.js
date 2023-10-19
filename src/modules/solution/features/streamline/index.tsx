@@ -29,7 +29,6 @@ export const Streamline: React.FC<Props> = ({ data, description, title }) => {
     if (window.innerWidth > 768) {
       navbarLinks.forEach((link: any) => {
         let section = document.querySelector(link.hash);
-        console.log(scrollpos + window.innerHeight / 2, section.offsetTop);
         if (
           section.offsetTop <= scrollpos + window.innerHeight / 2 &&
           section.offsetTop + section.offsetHeight >
