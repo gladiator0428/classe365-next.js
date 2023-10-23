@@ -14,7 +14,7 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
   const router = useRouter();
   const [isActive, setIsActive] = useState("no-submenu");
   const [width, setWidth] = useState(0);
-  const [hoveredMenu, setHoveredMenu] = useState(-1);
+  const [hoveredMenu, setHoveredMenu] = useState("");
   const [isSubActive, setIsSubActive] = useState("no-submenu");
   const [megaMenu, setMegaMenu] = useState("");
   const wrapperRef = useRef<any>(null);
@@ -149,12 +149,12 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
                           setMegaMenu("");
                           router.push(sItem.to);
                         }}
-                        onMouseEnter={() => setHoveredMenu(sKey)}
-                        onMouseLeave={() => setHoveredMenu(-1)}
+                        onMouseEnter={() => setHoveredMenu(sItem.to)}
+                        onMouseLeave={() => setHoveredMenu("")}
                       >
                         <div className="icon-wrapper">
                           {sItem.icon ? (
-                            hoveredMenu === sKey ? (
+                            hoveredMenu === sItem.to ? (
                               sItem.hoverIcon
                             ) : (
                               sItem.icon
@@ -194,10 +194,16 @@ export const NavItem: React.FC<Type.INavItemProps> = ({
                             setMegaMenu("");
                             router.push(sItem.to);
                           }}
+                          onMouseEnter={() => setHoveredMenu(sItem.to)}
+                          onMouseLeave={() => setHoveredMenu("")}
                         >
                           <div className="icon-wrapper">
                             {sItem.icon ? (
-                              sItem.icon
+                              hoveredMenu === sItem.to ? (
+                                sItem.hoverIcon
+                              ) : (
+                                sItem.icon
+                              )
                             ) : (
                               <Image
                                 src={sItem.image}
