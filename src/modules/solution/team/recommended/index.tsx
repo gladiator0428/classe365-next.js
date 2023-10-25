@@ -44,35 +44,28 @@ export const Recommended: React.FC<Props> = ({
             </span>
           ))}
         </Styled.RecommendedTabWrapper>
-        <Styled.RecommendedTabContent>
-          <Styled.RecommededInfoWrapper>
-            <img
-              src={
-                STRAPI_API +
-                data?.filter((f) => f.tab === selected)[0]?.icon?.url
-              }
-              alt=""
-            />
-            <p style={{ color: textColor ? textColor : "#fff" }}>
-              {data?.filter((f) => f.tab === selected)[0]?.description}
-            </p>
-            <a
-              href={data?.filter((f) => f.tab === selected)[0]?.link}
-              style={{ color: textColor ? "#6772E5" : "#fff" }}
-            >
-              Set Up a Private Demo <BsArrowRight />
-            </a>
-          </Styled.RecommededInfoWrapper>
-          <Styled.RecommendedImageWrapper>
-            <img
-              src={
-                STRAPI_API +
-                data?.filter((f) => f.tab === selected)[0]?.image?.url
-              }
-              alt=""
-            />
-          </Styled.RecommendedImageWrapper>
-        </Styled.RecommendedTabContent>
+        {data?.map((item, key) => (
+          <Styled.RecommendedTabContent
+            key={key}
+            className={item.tab === selected ? "show" : ""}
+          >
+            <Styled.RecommededInfoWrapper>
+              <img src={STRAPI_API + item?.icon?.url} alt="" />
+              <p style={{ color: textColor ? textColor : "#fff" }}>
+                {item?.description}
+              </p>
+              <a
+                href={item?.link}
+                style={{ color: textColor ? "#6772E5" : "#fff" }}
+              >
+                Set Up a Private Demo <BsArrowRight />
+              </a>
+            </Styled.RecommededInfoWrapper>
+            <Styled.RecommendedImageWrapper>
+              <img src={STRAPI_API + item?.image?.url} alt="" />
+            </Styled.RecommendedImageWrapper>
+          </Styled.RecommendedTabContent>
+        ))}
       </Styled.RecommendedContainer>
     </Styled.RecommendedWrapper>
   );

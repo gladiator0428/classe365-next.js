@@ -34,13 +34,15 @@ export const Features: React.FC<Props> = ({
     <Styled.FeaturesWrapper>
       <Styled.FeaturesInfoWrapper>
         <Styled.FeaturesDescription>
-          <Image
-            src={image?.url ? STRAPI_API + icon?.url : icon}
-            alt="hand-clap"
-            width={48}
-            height={48}
-          />
-          <h2>{subtitle}</h2>
+          <h2>
+            {subtitle}{" "}
+            <Image
+              src={image?.url ? STRAPI_API + icon?.url : icon}
+              alt="hand-clap"
+              width={48}
+              height={48}
+            />
+          </h2>
           <p>{title}</p>
         </Styled.FeaturesDescription>
       </Styled.FeaturesInfoWrapper>

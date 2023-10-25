@@ -9,10 +9,6 @@ import * as Icon from "@/components/SVGs/menu";
 
 export const headerLeftNavs = [
   {
-    label: "Free Resources",
-    to: "/free",
-  },
-  {
     label: "Solutions",
     to: "",
     subMenu: [
@@ -162,15 +158,20 @@ export const headerLeftNavs = [
           {
             label: "Fee & Donation Module",
             to: "/solution/features/fee",
-            image: "/assets/images/shapes/Fees_invoicing.png",
+            image: "/assets/images/shapes/Donations.png",
           },
         ],
       },
     ],
   },
+
   {
     label: "Pricing",
     to: "/pricing",
+  },
+  {
+    label: "Free Resources",
+    to: "/free",
   },
   {
     label: "More",

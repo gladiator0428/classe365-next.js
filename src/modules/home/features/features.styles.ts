@@ -34,7 +34,7 @@ export const FeaturesContentWrapper = styled.div`
     .swiper-pagination-bullet {
       width: 14px;
       height: 14px;
-      background-color: #f1f6fa;
+      background-color: #8e969d;
       &.swiper-pagination-bullet-active {
         background-color: #6772e5;
       }
@@ -64,7 +64,13 @@ export const FeaturesDescription = styled.div`
   h2 {
     font-size: 36px;
     font-weight: 700;
-    margin: 40px 0 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      margin-left: 20px;
+    }
   }
   p {
     font-size: 18px;

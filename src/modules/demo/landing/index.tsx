@@ -2,6 +2,7 @@ import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import * as Styled from "./landing.styles";
 import { useRouter } from "next/router";
+import { AppLogoWhiteSVG } from "@/components/SVGs/logo";
 
 export const Landing: React.FC = () => {
   const router = useRouter();
@@ -12,7 +13,7 @@ export const Landing: React.FC = () => {
         <div className="wave"></div>
       </Styled.LandingWaveAnim>
       <Styled.LandingLogo onClick={() => router.push("/")}>
-        <img src="/assets/images/logo-white.png" alt="App Logo White" />
+        <AppLogoWhiteSVG />
       </Styled.LandingLogo>
       <Styled.TitleWrapper>
         <h1>Classe365 Live Webinars</h1>

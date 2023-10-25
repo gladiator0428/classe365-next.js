@@ -28,6 +28,7 @@ export const seo_lists: { [any: string]: ISeoProps } = {
   },
   contact: { title: "", description: "", image: "" },
   about: { title: "", description: "", image: "" },
+  free: { title: "", description: "", image: "" },
   solution_feature_alumni: {
     title: "",
     description: "",

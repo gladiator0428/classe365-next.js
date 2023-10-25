@@ -32,11 +32,10 @@ export const LandingWaveAnim = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #015871;
+  background: #7c79ff;
 
   .wave {
-    background: url("https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg")
-      repeat-x;
+    background: url("/assets/images/wave.svg") repeat-x;
     position: absolute;
     top: -198px;
     width: 6400px;

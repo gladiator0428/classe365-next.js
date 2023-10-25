@@ -108,9 +108,12 @@ export const RecommendedTabWrapper = styled.div<{ tabStyle?: boolean }>`
 
 export const RecommendedTabContent = styled.div`
   padding-top: 80px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
+  &.show {
+    display: flex;
+  }
   @media screen and (max-width: 768px) {
     padding-top: 40px;
     flex-direction: column;

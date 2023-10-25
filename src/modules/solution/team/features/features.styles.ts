@@ -106,7 +106,7 @@ export const FeatureListIteam = styled.div`
   text-decoration: none;
   display: block;
   /* border-left: 3px solid #fafafa; */
-  padding: 100px 0;
+  padding: 200px 0;
   /* padding-left: 20px; */
   /* min-height: 100vh; */
   div {

@@ -52,7 +52,7 @@ export const StreamlineImageWrapper = styled.div`
     /* padding-top: 50px; */
     img {
       width: 100%;
-      image-rendering: pixelated;
+      /* image-rendering: pixelated; */
     }
   }
   @media screen and (max-width: 768px) {

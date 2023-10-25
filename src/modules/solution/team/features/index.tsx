@@ -36,8 +36,9 @@ export const Features: React.FC<Props> = ({
     setWidth(window.innerWidth);
     let navbarLinks = document.querySelectorAll("#feature-navbar a");
     const scrollpos = window.scrollY;
-    if (width > 768) {
+    if (window.innerWidth > 768) {
       navbarLinks.forEach((link: any) => {
+        console.log(link.hash);
         let section = document.querySelector(link.hash);
         if (
           section.offsetTop <= scrollpos + window.innerHeight / 2 &&

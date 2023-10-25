@@ -53,7 +53,7 @@ export const Navigation: React.FC = () => {
               ))}
             </Styled.NavigationListContent>
             <Styled.NavigationListContent>
-              <h2>Classe 365</h2>
+              <h2>Classe365</h2>
               <a href="#">22-28 Edgeworth David Avenue, Hornsby, NSW 2077</a>
             </Styled.NavigationListContent>
             <Styled.NavigationListContent>

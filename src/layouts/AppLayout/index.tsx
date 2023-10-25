@@ -10,11 +10,13 @@ type Props = {
   name: string;
   title?: string;
   description?: string;
+  is_only_footer?: boolean;
   image?: string;
 } & React.HTMLAttributes<HTMLElement>;
 
 export const AppLayout: React.FC<Props> = ({
   children,
+  is_only_footer,
   is_new_book,
   name,
   title,
@@ -47,7 +49,8 @@ export const AppLayout: React.FC<Props> = ({
       <Header />
       <Styled.AppContentWrapper>{children}</Styled.AppContentWrapper>
       <Styled.FooterWrapper>
-        {is_new_book ? <Section.NewBook /> : <Section.Book />}
+        {!is_only_footer &&
+          (is_new_book ? <Section.NewBook /> : <Section.Book />)}
         <Section.Navigation />
       </Styled.FooterWrapper>
     </Styled.AppLayoutWrapper>
