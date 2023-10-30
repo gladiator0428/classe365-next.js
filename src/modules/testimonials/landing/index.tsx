@@ -8,8 +8,9 @@ export const Landing: React.FC = () => {
     <Styled.LandingWrapper>
       <h1>Customers Tell It Better</h1>
       <p>
-        Unlock your academy's full potential with Classe365 Student Management
-        Software.
+        {
+          "Unlock your academy's full potential with Classe365 Student Management Software."
+        }
       </p>
       <Styled.LandingButtonWrapper>
         <Comp.Button
