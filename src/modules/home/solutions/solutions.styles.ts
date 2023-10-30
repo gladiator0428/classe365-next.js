@@ -184,7 +184,7 @@ export const SolutionImageWrapper = styled.div<{ bg: string }>`
   pointer-events: none;
 
   div {
-    padding-left: 20px;
+    padding-left: 100px;
     display: flex;
     transition: all 0.3s;
     width: calc(60% - 40px);

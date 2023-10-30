@@ -50,7 +50,8 @@ export const SearchFilterWrapper = styled.div`
   align-items: center;
   width: 95%;
   margin: auto;
-  span {
+  a {
+    text-decoration: none;
     display: flex;
     height: 43px;
     align-items: center;

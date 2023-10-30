@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const ROICalculator: React.FC = () => {
   return (
-    <Styled.ROIWrapper>
+    <Styled.ROIWrapper id="roi">
       <div>
         <h1>ROI Calculator</h1>
         <p>

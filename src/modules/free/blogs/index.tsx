@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "@/components";
 
 export const BlogArticles: React.FC = () => {
   return (
-    <Styled.HelpArticlesWrapper>
+    <Styled.HelpArticlesWrapper id="blog-articles">
       <h1>
         <p>Blog Articles</p>
         <span>View All Articles</span>

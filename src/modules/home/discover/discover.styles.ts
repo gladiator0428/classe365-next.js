@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const DiscoverWrapper = styled.div`
-  padding: 120px 0 200px;
+  padding: 120px 0 100px;
   width: 100%;
   display: flex;
   position: relative;

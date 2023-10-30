@@ -4,9 +4,9 @@ import { videos } from "../articles/data";
 
 export const HelpVideos: React.FC = () => {
   return (
-    <Styled.HelpArticlesWrapper>
+    <Styled.HelpArticlesWrapper id="help-videos">
       <h1>
-        <p>Help Articles</p>
+        <p>Help Videos</p>
         <span>View All Articles</span>
       </h1>
       <Styled.HelpArticlesGridWrapper>

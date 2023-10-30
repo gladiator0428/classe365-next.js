@@ -29,6 +29,7 @@ export const Streamline: React.FC<Props> = ({ data, description, title }) => {
     if (window.innerWidth > 768) {
       navbarLinks.forEach((link: any) => {
         let section = document.querySelector(link.hash);
+
         if (
           section.offsetTop <= scrollpos + window.innerHeight / 2 &&
           section.offsetTop + section.offsetHeight >
@@ -57,7 +58,7 @@ export const Streamline: React.FC<Props> = ({ data, description, title }) => {
             </a>
           ))}
         </Styled.StreamlineImageWrapper>
-        <Styled.StreamlineTextWrapper>
+        <Styled.StreamlineTextWrapper id="asdfasdfasdf">
           {data?.map((row, index) => (
             <div key={index} id={"streamline-" + index}>
               <h1>{row.title}</h1>

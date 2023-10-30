@@ -71,7 +71,7 @@ export const Landing: React.FC<Props> = ({
         <Comp.Button
           bg="#6772E5"
           border="#6772E5"
-          font="#E1E1E1"
+          font="#fff"
           className="shadow"
         >
           <span>Try For Free</span>

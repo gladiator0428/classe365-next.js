@@ -4,7 +4,7 @@ import { template } from "../articles/data";
 
 export const Templates: React.FC = () => {
   return (
-    <Styled.HelpArticlesWrapper>
+    <Styled.HelpArticlesWrapper id="templates">
       <h1>
         <p>Templates</p>
         <span>See all template</span>

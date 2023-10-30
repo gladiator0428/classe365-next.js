@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Playbook: React.FC = () => {
   return (
-    <Styled.PlaybookWrapper>
+    <Styled.PlaybookWrapper id="playbook">
       <div>
         <h1>Digital Transformation Playbook</h1>
         <p>

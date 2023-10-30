@@ -4,7 +4,7 @@ import { articles } from "./data";
 
 export const HelpArticles: React.FC = () => {
   return (
-    <Styled.HelpArticlesWrapper>
+    <Styled.HelpArticlesWrapper id="help-articles">
       <h1>
         <p>Help Articles</p>
         <span>View All Articles</span>

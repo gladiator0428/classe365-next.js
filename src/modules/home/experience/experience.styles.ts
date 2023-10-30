@@ -27,13 +27,10 @@ export const TitleWrapper = styled.div`
 `;
 
 export const ExperienceContentWrapper = styled.div`
-  position: relative;
-  flex: 1;
-  margin: 40px auto;
   max-width: 1240px;
-  align-items: center;
+  margin: -100vh auto auto;
   width: 95%;
-  margin-top: calc(168px - 100vh);
+  /* margin-top: -100vh; */
   @media screen and (max-width: 768px) {
     padding-left: 5px;
     margin-top: 0;
@@ -44,7 +41,9 @@ export const ExperienceContentWrapper = styled.div`
 export const ExperienceItemWrapper = styled.div<{ color: string }>`
   max-width: 395px;
   width: 40%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  /* padding: 100px 0; */
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -121,13 +120,19 @@ export const ExperienceItemWrapper = styled.div<{ color: string }>`
     img {
       width: 32px;
     }
-    div {
+    div.lottie-wrapper {
       display: flex;
       width: 100%;
-      padding-top: 60%;
+      /* padding-top: 60%; */
       background: #d9d9d9;
       margin-top: 24px;
       position: relative;
+      & > div {
+        display: flex;
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+      }
     }
     svg {
       width: 32px;
@@ -137,15 +142,25 @@ export const ExperienceItemWrapper = styled.div<{ color: string }>`
 `;
 
 export const ImageWrapper = styled.div`
-  position: sticky;
-  top: 210px;
-  display: flex;
-  margin-top: 42px;
-  justify-content: flex-end;
-  pointer-events: none;
   margin-left: auto;
-  img {
-    max-width: 57%;
+  position: sticky;
+  width: 45%;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  a {
+    display: none;
+    width: 100%;
+    height: auto !important;
+    &.active {
+      display: flex;
+    }
+    & > div {
+      margin: 0 !important;
+      width: 100% !important;
+      height: auto !important;
+    }
   }
   @media screen and (max-width: 768px) {
     display: none;

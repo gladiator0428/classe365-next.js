@@ -11,12 +11,12 @@ export const Search: React.FC = () => {
         <SearchIcon />
       </Styled.SearchInputWrapper>
       <Styled.SearchFilterWrapper>
-        <span>Templates</span>
-        <span>Help Articles</span>
-        <span>Blog Articles</span>
-        <span>ROI Calculator</span>
-        <span>Help Videos</span>
-        <span>Play Book</span>
+        <a href="#templates">Templates</a>
+        <a href="#help-articles">Help Articles</a>
+        <a href="#blog-articles">Blog Articles</a>
+        <a href="#roi">ROI Calculator</a>
+        <a href="#help-videos">Help Videos</a>
+        <a href="#playbook">Play Book</a>
       </Styled.SearchFilterWrapper>
     </Styled.SearchWrapper>
   );
