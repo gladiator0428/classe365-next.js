@@ -144,11 +144,12 @@ export const ExperienceItemWrapper = styled.div<{ color: string }>`
 export const ImageWrapper = styled.div`
   margin-left: auto;
   position: sticky;
-  width: 45%;
+  width: 50%;
   top: 0;
   height: 100vh;
   display: flex;
   align-items: center;
+  padding-right: 100px;
   a {
     display: none;
     width: 100%;
