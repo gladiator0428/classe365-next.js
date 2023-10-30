@@ -8,7 +8,7 @@ import * as lottie1 from "./data1.json";
 import * as lottie2 from "./data2.json";
 import * as lottie3 from "./data3.json";
 
-const lottieData = [lottie1, lottie2, lottie3];
+const lottieData = [lottie2, lottie3, lottie1];
 
 type Props = {
   title: string;
